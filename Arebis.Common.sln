@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{327FA491-A91D-4590-B8F9-ED334D2A0EE0}"
 	ProjectSection(SolutionItems) = preProject
@@ -9,7 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		LICENSE = LICENSE
 		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
 		NuGet.config = NuGet.config
-		PublishChanges.cmd = PublishChanges.cmd
+		PostBuild.cmd = PostBuild.cmd
+		PublishNugets.cmd = PublishNugets.cmd
+		PublishSourceCodeChanges.cmd = PublishSourceCodeChanges.cmd
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -48,6 +50,28 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arebis.Web", "Arebis.Web\Arebis.Web.csproj", "{E79F2D21-B4BA-4482-BF6C-43C77AF98FC6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arebis.Windows", "Arebis.Windows\Arebis.Windows.csproj", "{4A771D05-F916-4F9B-B531-87114692B872}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arebis.Contract", "Arebis.Contract\Arebis.Contract.csproj", "{8AAA39E3-BD12-426E-877F-924064C9828B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arebis.Portable.Tests", "Arebis.Portable.Tests\Arebis.Portable.Tests.csproj", "{0052EBBF-90B5-4C8A-AC40-7C735BCF5DB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arebis.Data.Entity", "Arebis.Data.Entity\Arebis.Data.Entity.csproj", "{1F5714BD-1F1C-46D3-A645-E6EE0513F260}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{8EE526C1-D1CD-4773-9BAA-BA5E8A67C823}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Arebis.Logging.GrayLog", "Arebis.Logging.GrayLog", "{C3C490D8-9479-4DDA-84B1-A7F8571E4C5A}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\Arebis.Logging.GrayLog\README.md = Documentation\Arebis.Logging.GrayLog\README.md
+		Documentation\Arebis.Logging.GrayLog\screenshot_sample1.png = Documentation\Arebis.Logging.GrayLog\screenshot_sample1.png
+		Documentation\Arebis.Logging.GrayLog\screenshot_sample2.png = Documentation\Arebis.Logging.GrayLog\screenshot_sample2.png
+		Documentation\Arebis.Logging.GrayLog\screenshot_sample3.png = Documentation\Arebis.Logging.GrayLog\screenshot_sample3.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Arebis.Pdf", "Arebis.Pdf", "{3FADEE8B-3540-4E1D-BB3A-E057AAD62A5F}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\Arebis.Pdf\README.md = Documentation\Arebis.Pdf\README.md
+		Documentation\Arebis.Pdf\Sample1.pdf = Documentation\Arebis.Pdf\Sample1.pdf
+	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Arebis.Logging.GrayLog.NetCore", "Arebis.Logging.GrayLog.NetCore\Arebis.Logging.GrayLog.NetCore.xproj", "{7E07749D-8CE9-40DD-BE8F-53D7BF328CEB}"
 EndProject
@@ -125,6 +149,18 @@ Global
 		{4A771D05-F916-4F9B-B531-87114692B872}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A771D05-F916-4F9B-B531-87114692B872}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A771D05-F916-4F9B-B531-87114692B872}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AAA39E3-BD12-426E-877F-924064C9828B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AAA39E3-BD12-426E-877F-924064C9828B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AAA39E3-BD12-426E-877F-924064C9828B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AAA39E3-BD12-426E-877F-924064C9828B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0052EBBF-90B5-4C8A-AC40-7C735BCF5DB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0052EBBF-90B5-4C8A-AC40-7C735BCF5DB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0052EBBF-90B5-4C8A-AC40-7C735BCF5DB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0052EBBF-90B5-4C8A-AC40-7C735BCF5DB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F5714BD-1F1C-46D3-A645-E6EE0513F260}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F5714BD-1F1C-46D3-A645-E6EE0513F260}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F5714BD-1F1C-46D3-A645-E6EE0513F260}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F5714BD-1F1C-46D3-A645-E6EE0513F260}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7E07749D-8CE9-40DD-BE8F-53D7BF328CEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7E07749D-8CE9-40DD-BE8F-53D7BF328CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E07749D-8CE9-40DD-BE8F-53D7BF328CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -138,6 +174,9 @@ Global
 		{6DB86F3D-25D7-4959-B860-FADBBE896B97} = {DF405580-636B-48A1-8924-40FBEFF81721}
 		{A3261881-9AB1-4BDC-87F0-A34D2E9E7D11} = {DF405580-636B-48A1-8924-40FBEFF81721}
 		{3DFCD606-F4F0-4481-B0D6-ECFBE90904AE} = {DF405580-636B-48A1-8924-40FBEFF81721}
+		{0052EBBF-90B5-4C8A-AC40-7C735BCF5DB3} = {DF405580-636B-48A1-8924-40FBEFF81721}
+		{C3C490D8-9479-4DDA-84B1-A7F8571E4C5A} = {8EE526C1-D1CD-4773-9BAA-BA5E8A67C823}
+		{3FADEE8B-3540-4E1D-BB3A-E057AAD62A5F} = {8EE526C1-D1CD-4773-9BAA-BA5E8A67C823}
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = Arebis.Common1.vsmdi

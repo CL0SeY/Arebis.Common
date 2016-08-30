@@ -125,6 +125,7 @@
     <Compile Include="Arebis\Extensions\DateTimeExtension.cs" />
     <Compile Include="Arebis\Extensions\DictionaryExtensions.cs" />
     <Compile Include="Arebis\Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Arebis\Extensions\ExceptionExtensions.cs" />
     <Compile Include="Arebis\Extensions\FileInfoExtension.cs" />
     <Compile Include="Arebis\Extensions\NumberExtension.cs" />
     <Compile Include="Arebis\Extensions\ObjectExtension.cs" />
@@ -137,6 +138,7 @@
     <Compile Include="Arebis\IO\IFileSystemVisitor.cs" />
     <Compile Include="Arebis\IO\MergedReadStream.cs" />
     <Compile Include="Arebis\IO\MeteringStream.cs" />
+    <Compile Include="Arebis\IO\StreamExtensions.cs" />
     <Compile Include="Arebis\Linq\ExpressionHelper.cs" />
     <Compile Include="Arebis\Logging\ILogFormatter.cs" />
     <Compile Include="Arebis\Logging\ILogWriter.cs" />
@@ -202,6 +204,8 @@
     <Compile Include="Arebis\Runtime\Validation\PropertyAssertAttribute.cs" />
     <Compile Include="Arebis\Runtime\Validation\AssertNotNullAttribute.cs" />
     <Compile Include="Arebis\Runtime\Validation\ValidationExtension.cs" />
+    <Compile Include="Arebis\Source\CodeSourceAttribute.cs" />
+    <Compile Include="Arebis\Source\CodeToDoAttribute.cs" />
     <Compile Include="Arebis\Tasks\ISimpleTaskHost.cs" />
     <Compile Include="Arebis\Tasks\NonSuspendableAction.cs" />
     <Compile Include="Arebis\Tasks\ProgressEventArgs.cs" />
@@ -226,6 +230,7 @@
     <Compile Include="Arebis\Types\Wrapper.cs" />
     <Compile Include="Arebis\Utils\FileUtils.cs" />
     <Compile Include="Arebis\Utils\StringUtils.cs" />
+    <Compile Include="Arebis\Utils\VarUtils.cs" />
     <Compile Include="Arebis\Warning.cs" />
     <Compile Include="Arebis\WinApi\AdvApi32.cs" />
     <Compile Include="Arebis\WinApi\Kernel32.cs" />
@@ -310,6 +315,6 @@
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
-    <PostBuildEvent>nuget pack "$(ProjectPath)" -IncludeReferencedProjects -Prop Configuration=$(ConfigurationName)</PostBuildEvent>
+    <PostBuildEvent>"$(ProjectDir)..\PostBuild.cmd" "$(DevEnvDir)" "$(SolutionPath)" "$(ProjectPath)" "$(TargetPath)" "$(ConfigurationName)"</PostBuildEvent>
   </PropertyGroup>
 </Project>
